@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Sharp-Sans-Medium';
+    src: url('/fonts/SharpSans-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+  }
+  
+  body {
+    font-family: 'Sharp-Sans-Medium', sans-serif;
+  }
+}

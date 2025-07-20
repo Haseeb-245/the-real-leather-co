@@ -44,7 +44,7 @@
 </head>
 <body>
   <!-- Summer Sale Banner -->
-  <div class="bg-black text-white text-center py-2 px-4 text-sm font-semibold">
+  <div class="bg-black text-white text-center py-2 px-4  font-bold">
     20% Off Everything Summer Essentials Sale | Use Code SUMMER20 at Checkout | Ends Soon
   </div>
 
@@ -66,14 +66,16 @@
   </div>
 
   <!-- Main Navbar -->
-  <nav class="bg-white hidden md:flex items-center justify-between px-6 py-2">
-    <div class="">
-      <span class="block text-3xl font-semibold">THE REAL LEATHER CO.</span>
-      <span class="block ml-[11.8rem] text-[#333333] font-semibold">Carry Your Legacy</span>
+  <nav class="bg-white hidden md:flex items-center justify-between px-6 py-5">
+    <div class="bg w-[60] h-[40px]">
+     <img src="real.png" alt="real" class="w-full h-full object-cover">
     </div>
+  
 
     <ul class="flex gap-6 ml-[12rem]">
+      
       <!-- Work Bags Dropdown -->
+       <li class="py-2 px-3 font-semibold text-[#333333] hover:underline">Best Seller</li>
       <li class="dropdown py-2 px-3 font-semibold text-[#333333] hover:underline relative">
         <span class="flex items-center">
           Work Bags
@@ -252,13 +254,19 @@
   <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-50 pt-16 overflow-y-auto">
     <div class="container mx-auto px-4 py-6">
       <!-- Mobile Search -->
-      <div class="mb-6 relative">
-        <input type="text" placeholder="Search..." class="w-full border-b border-gray-300 py-2 px-4 focus:outline-none">
-        <button class="absolute right-0 top-0 h-full px-3 text-gray-500">
-          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-          </svg>
-        </button>
+     <div class="flex-1 max-w-xl px-8">
+        <div class="relative">
+          <input 
+            type="text" 
+            placeholder="Search products..." 
+            class="w-full py-2 px-4 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          >
+          <button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </button>
+        </div>
       </div>
 
       <!-- Mobile Menu Items -->
@@ -394,10 +402,10 @@
   <!-- Desktop Version  -->
   <div class="hidden md:block">
     <div class="bg-[#ebebeb] pt-2 pb-2">
-      <div class="container mx-auto flex justify-between px-4">
-        <span class="text-[14px] text-[#333333] font-sans font-semibold">50,000+ Heirloom Bags Shipped</span>
-        <span class="text-[14px] text-[#333333] font-sans font-semibold">1 Year Warranty & 30 Day Returns</span>
-        <span class="text-[14px] text-[#333333] font-sans font-semibold">Rated 4.8/5 from 1300+ Reviews</span>
+      <div class="container mx-auto flex justify-between px-2">
+        <span class="ml-[rem] text-[14px] text-[#333333] font-[Arial] font-semibold">50,000+ Heirloom Bags Shipped</span>
+        <span class="ml-[rem] text-[14px] text-[#333333] font-[Arial] font-semibold">1 Year Warranty & 30 Day Returns</span>
+        <span class="ml-[rem] text-[14px] text-[#333333] font-[Arial] font-semibold">Rated 4.8/5 from 1300+ Reviews</span>
       </div>
     </div>
     <div class="bg-black h-[32.7rem] bg-[url('bg.jpg')] bg-cover bg-center">
@@ -460,7 +468,7 @@
       <div class="bg-amber-950 rounded-[20px] h-[20rem] md:h-[26rem] overflow-hidden">
         <img src="wal1.png" class="w-full h-full object-cover" alt="Leather Briefcases">
       </div>
-      <h2 class="p-4 text-xl text-[#333333] font-semibold">Leather Briefcases →</h2>
+      <h2 class="p-4 text-xl text-[#333333] font-semibold">Leather Briefcases </h2>
     </div>
 
     <!-- Card 2 -->
@@ -505,18 +513,19 @@
   </div>
 
   <!-- View All Button -->
-  <div class="w-full flex justify-center mt-6">
-    <button class="rounded-lg text-white text-base font-semibold py-3.5 px-24 bg-[#321a16] hover:bg-[#4a2a25] transition-colors">
-      VIEW ALL
-    </button>
+    <div class=" w-full flex justify-center mt-2 ">
+  <button class="rounded-[0.7rem]  text-white text-[16px]  font-semibold
+    py-3.5 px-[150px] bg-[#321a16]">
+    VIEW ALL
+  </button>
   </div>
 </section>
 
 
   <!----------------------Bag Section--------------------------->
-<section>
+<section class="mt-5 md:mt-0">
 
-  <div class="grid grid-cols-2 p-4 [&>*]:h-[18rem] mt-10">
+  <div  class="hidden md:grid grid-cols-2 p-4 [&>*]:h-[18rem] mt-10">
     <div class="p-6 text-center text-black font-sharp-medium text-[25px] font-semibold">
       “Not just a bag—an heirloom investment in something lasting, personal, and timeless.”
       <div class="flex justify-center mt-16">
@@ -532,8 +541,35 @@
     </div>
   </div>
 
+    <!-- Mobile Carousel (hidden on desktop) -->
+  <div class="md:hidden relative overflow-hidden">
+    <div class="flex overflow-x-auto  snap-x snap-mandatory whitespace-nowrap space-x-4 p-4">
+      <!-- Slide 1 -->
+      <div class="inline-block w-[90vw] h-[18rem] snap-align snap-start p-6 text-center text-black font-sharp-medium text-[20px] font-semibold bg-white rounded-lg shadow-sm">
+        “Not just a bag—an heirloom investment <br> in something lasting, personal, and timeless.”
+        <div class="flex justify-center mt-16">
+          <img src="gq.jpg" class="h-12" alt="GQ Magazine">
+        </div>
+      </div>
+      
+      <!-- Slide 2 -->
+      <div class="inline-block w-[90vw] h-[18rem] snap-align snap-start p-6 text-center text-black font-sharp-medium text-[20px] font-semibold bg-white rounded-lg shadow-sm">
+        “Bags that age like a fine wine - gaining <br> more character over time.”
+        <div class="flex justify-center mt-16">
+          <img src="esq.png" class="h-10" alt="Esquire Magazine">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Scroll indicator (optional) -->
+    <div class="flex justify-center space-x-2 mt-4">
+      <span class="w-2 h-2 bg-black rounded-full"></span>
+      <span class="w-2 h-2 bg-black rounded-full"></span>
+    </div>
+  </div>
+
   <!------------------BAGS SECTION GRID---------------------------------->
-  <div id="cards" class="grid grid-cols-1 md:grid-cols-3 gap-5 p-4 w-full max-w-7xl mx-auto">
+  <div id="cards" class=" grid grid-cols-2   md:grid-cols-3 gap-5 p-4 w-full max-w-7xl mx-auto">
 
 
     <!-----------------THE HERITAGE-------------------------->
@@ -558,7 +594,7 @@
     <!-----------------THE SKYLER-------------------------->
 <div class="product-card bg-[#F2F2F2] p-0 m-0 text-center rounded-[20px] overflow-hidden">
   <div class="bg-[#F2F2F2] m-0 p-0 rounded-[20px] h-[26rem] cursor-pointer">
-    <img src="bag2.png" data-hover="bag2-2.png" class="p-0 m-0 rounded-[20px] w-full h-full object-cover" id="main-product-image">
+    <img src="bag2.png" data-hover="bag2-2.png" class="p-0 m-0 rounded-[20px]" id="main-product-image">
   </div>
   <div class="p-4 text-left">
     <div class="space-y-1">
@@ -715,18 +751,18 @@
   </div>
 
   </div>
-  <div class="w-full flex justify-center mt-2 ">
+  <div class="  w-full flex justify-center mt-2 ">
   <button class="rounded-[0.7rem]  text-white text-[16px]  font-semibold
-    py-3.5 px-[100px] bg-[#321a16]
-    ">
-    VIEW ALL
+    py-3.5 px-[100px] bg-[#321a16]">
+    READ ALL OUR REVIEWS
   </button>
+  </div>
 </div>
 
 </section>
 
 <!------------------------------------reviews section------------------------------>
-<section >
+<section class="hidden md:block mt-5">
 
 <div class="grid grid-cols-3  gap-3 p-4 w-full  mx-auto [&>*]:rounded-[20px] [&>*]:h-[33rem] mt-8 ">
 
@@ -744,7 +780,7 @@
 
    
   </div>
-  <div class="flex justify-center mt-5">
+  <div class="flex justify-center">
   <p class="text-2xl font-semibold text-center w-[21rem]  text-[#ffffff]">“Let me state this: After your demise, your children will fight over who gets this bag!”</p>
   </div>
   <div class=" mt-5 flex justify-center items-center space-x-2">
@@ -801,89 +837,189 @@
   </div>
 
 </div>
-  <div class="w-full flex justify-center mt-2 ">
+  <div class=" hidden md:block w-full md:flex justify-center mt-2 ">
   <button class="rounded-[0.7rem]  text-white text-[16px]  font-semibold
     py-3.5 px-[100px] bg-[#321a16]">
     READ ALL OUR REVIEWS
   </button>
+  </div>
 </div>
+
+
+
 </section>
+<section class="">
+  <div class="md:hidden relative m-2">
+    <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide h-[25rem]">
+      <!-- Review 1 Slide -->
+      <div class="min-w-full snap-align snap-start bg-[url('review1.png')] bg-cover bg-center mr-2 rounded-[20px]">
+        <div class="flex justify-center space-x-1 pt-24">
+          <div class="flex">
+            <span class="text-[#ffffff] text-xl">★</span>
+            <span class="text-[#ffffff] text-xl">★</span>
+            <span class="text-[#ffffff] text-xl">★</span>
+            <span class="text-[#ffffff] text-xl">★</span>
+            <span class="text-[#ffffff] text-xl">★</span>
+          </div>
+        </div>
+        <div class="flex justify-center mt-5 px-4">
+          <p class="text-2xl font-semibold text-center text-[#ffffff]">"Let me state this: After your demise, your children will fight over who gets this bag!"</p>
+        </div>
+        <div class="mt-5 flex justify-center items-center space-x-2">
+          <span class="font-semibold text-[#d4d4d4] text-center text-[1rem]">Jesse S.</span>
+          <span class="text-[black] bg-amber-50 rounded-full text-[10px] px-2 italic ml-2 text-center">Verified</span>
+        </div>
+        <div class="mt-2 flex justify-center items-center space-x-2">
+          <span class="font-semibold text-[#fcfcfc] text-center text-[1rem]">Hernando, US</span>
+        </div>
+      </div>
+      
+      <!-- Review 2 Slide -->
+      <div class="min-w-full snap-align snap-start bg-[url('review2.png')] bg-cover bg-center rounded-[20px] mr-2">
+        <div class="flex justify-center space-x-1 pt-24">
+          <div class="flex">
+            <span class="text-[#ffffff] text-xl">★</span>
+            <span class="text-[#ffffff] text-xl">★</span>
+            <span class="text-[#ffffff] text-xl">★</span>
+            <span class="text-[#ffffff] text-xl">★</span>
+            <span class="text-[#ffffff] text-xl">★</span>
+          </div>
+        </div>
+        <div class="flex justify-center mt-5 px-4">
+          <p class="text-2xl font-semibold text-center text-[#ffffff]">"My grandson will truly have this bag for life—it's the high-end quality I hoped for when I ordered."</p>
+        </div>
+        <div class="mt-5 flex justify-center items-center space-x-2">
+          <span class="font-semibold text-[#d4d4d4] text-center text-[1rem]">James K.</span>
+          <span class="text-[black] bg-amber-50 rounded-full text-[10px] px-2 italic ml-2 text-center">Verified</span>
+        </div>
+        <div class="mt-2 flex justify-center items-center space-x-2">
+          <span class="font-semibold text-[#fcfcfc] text-center text-[1rem]">Maryland, US</span>
+        </div>
+      </div>
+      
+      <!-- Review 3 Slide -->
+      <div class="min-w-full snap-align snap-start bg-[url('review3.png')] bg-cover bg-center rounded-[20px]">
+        <div class="flex justify-center space-x-1 pt-24">
+          <div class="flex">
+            <span class="text-[#ffffff] text-xl">★</span>
+            <span class="text-[#ffffff] text-xl">★</span>
+            <span class="text-[#ffffff] text-xl">★</span>
+            <span class="text-[#ffffff] text-xl">★</span>
+            <span class="text-[#ffffff] text-xl">★</span>
+          </div>
+        </div>
+        <div class="flex justify-center mt-5 px-4">
+          <p class="text-2xl font-semibold text-center text-[#ffffff]">"Something worth keeping forever & creating an heirloom from - full of decades of adventure, stories, and memories."</p>
+        </div>
+        <div class="mt-5 flex justify-center items-center space-x-2">
+          <span class="font-semibold text-[#d4d4d4] text-center text-[1rem]">Jeffery I.</span>
+          <span class="text-[black] bg-amber-50 rounded-full text-[10px] px-2 italic ml-2 text-center">Verified</span>
+        </div>
+        <div class="mt-2 flex justify-center items-center space-x-2">
+          <span class="font-semibold text-[#fcfcfc] text-center text-[1rem]">Endicott, US</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Dot Indicators -->
+    <div class="flex justify-center space-x-2 mt-4">
+      <span class="dot w-2 h-2 bg-black rounded-full transition-all duration-300"></span>
+      <span class="dot w-2 h-2 bg-black rounded-full transition-all duration-300"></span>
+      <span class="dot w-2 h-2 bg-black rounded-full transition-all duration-300"></span>
+    </div>
+  </div>
+
+  <!-- Read All Reviews Button -->
+  <div class="block md:hidden w-full flex justify-center mt-2">
+    <button class="rounded-[0.7rem] text-white text-[16px] font-semibold py-3.5 px-[100px] bg-[#321a16]">
+      READ ALL OUR REVIEWS
+    </button>
+  </div>
+</section>
+
+
+
+
+
+
 
 <!-----------------------------------------BEST SELLERS SECTION ------------------------------------------------------------------>
 <section>
+  <div class="bg-[#f3f3f3] mx-5 my-20 rounded-[20px] md:h-[42rem] h-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 [&>*]:rounded-[20px]">
+      <!-- Text Content (now first on mobile) -->
+      <div class="bg-[#f3f3f3] py-10 md:py-20 px-4 order-2 md:order-1 h-auto md:h-[42rem]">
+        <div class="max-w-[32rem] md:max-w-[22rem] m-2  md:ml-[3rem] md:mt-[2rem]   text-left space-y-5">
+          <h1 class="text-2xl md:text-[30px] font-semibold text-[#303030] ">
+            50,000+ Heirloom Bags Shipped
+          </h1>
+         
+          <p class="text-[#303030] font-semibold text-sm md:text-base">
+            Whether it's walking into a new job, the daily commute or a weekend getaway, over 50,000
+            lawyers, bankers and executives trust our leather bags to help them carry with confidence.
+          </p>
 
-<div class="bg-[#f3f3f3] mx-5 my-20 rounded-[20px]  h-[42rem]" > 
-<div class="grid grid-cols-2 [&>*]:h-[42rem] [&>*]:rounded-[20px]">
- <div class="bg-[#f3f3f3] py-20 px-4">
-  <div class="max-w-[22rem] mt-[2rem] ml-[3rem]  text-left space-y-5">
-    <h1 class="text-[30px] font-semibold text-[#303030]">
-      50,000+ Heirloom Bags Shipped
-    </h1>
+          <p class="text-[#303030] font-semibold text-sm md:text-base block py-4">
+            Rated 4.8/5 stars from over a thousand verified reviews, our timeless designs and heirloom
+            quality craftsmanship are built to impress – wherever life takes you.
+          </p>
+        </div>
+        <div class="flex justify-center md:justify-start md:ml-10 mt-6 md:mt-2">
+          <button class="rounded-lg md:rounded-[0.7rem] text-white text-sm md:text-[17px] font-semibold
+            py-3.5 px-[100px] md:py-3.5 md:px-[100px] bg-[#321a16]">
+            SHOP BEST SELLERS
+          </button>
+        </div>
+      </div>
 
-    <p class="text-[#303030] font-semibold">
-      Whether it’s walking into a new job, the daily commute or a weekend getaway, over 50,000
-      lawyers, bankers and executives trust our leather bags to help them carry with<br> confidence.
-    </p>
-
-    <p class="text-[#303030] font font-semibold block py-4">
-      Rated 4.8/5 stars from over a thousand verified reviews, our timeless designs and heirloom
-      quality craftsmanship are built to impress – wherever life takes you.
-    </p>
+      <!-- Image (now second on mobile) -->
+      <div class="bg-[#f3f3f3] overflow-hidden order-1 md:order-2 h-[42rem] md:h-[42rem]">
+        <img src="seller.png" class="w-full h-full object-cover" alt="Heirloom leather bags">
+      </div>
+    </div>
   </div>
-   <div class=" ml-10 mt-2 ">
-  <button class="rounded-[0.7rem]  text-white text-[17px]  font-semibold
-    py-3.5 px-[100px] bg-[#321a16]  ">
-    SHOP BEST SELLERS
-  </button>
-</div>
-</div>
-
-  <div class="bg-[#f3f3f3] overflow-hidden">
-     <img src="seller.png" class="w-full h-full object-cover">
-  </div>
- 
-</div>
-</div>
-<!------------------------------Story section ------------------------------------->
 </section>
 
 <section>
+  <div class="bg-[#f3f3f3] mx-5 my-20 rounded-[20px] md:h-[42rem] h-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 [&>*]:rounded-[20px]">
+      <!-- Image (first on mobile) -->
+      <div class="bg-[#f3f3f3] overflow-hidden h-[42rem]">
+        <img src="story.png" class="w-full h-full object-cover" alt="Crafted leather goods">
+      </div>
 
-<div class="bg-[#f3f3f3] mx-5 my-20 rounded-[20px]  h-[42rem]" > 
-<div class="grid grid-cols-2 [&>*]:h-[42rem] [&>*]:rounded-[20px]">
- <div class="bg-[#f3f3f3] overflow-hidden">
- <img src="story.png" class="w-full h-full object-cover">
-</div>
+      <!-- Text Content -->
+      <div class="bg-[#f3f3f3] py-10 md:py-0 px-4 md:px-0 h-auto md:h-[42rem]">
+        <div class="max-w-[32rem] md:max-w-[21rem] m-2 md:ml-[4rem] md:mt-[7rem] text-left space-y-5">
+          <h1 class="text-2xl md:text-[30px] font-semibold text-[#303030]">
+            Crafted for Those <br class="hidden md:block">
+            Who Expect More
+          </h1>
 
-  <div class="bg-[#f3f3f3] overflow-hidden">
-  <div class="max-w-[22rem] mt-[7rem] ml-[4rem]  text-left space-y-5">
-    <h1 class="text-[30px] font-semibold text-[#303030]"> Crafted for Those <br>
-    Who Expect More
-    </h1>
+          <p class="text-[#303030] font-semibold text-sm md:text-base">
+            From a quiet attic workshop in rural England 
+            to 50,000 professionals worldwide, our story
+            is rooted in legacy, craftsmanship, and <br class="hidden md:block">
+            purpose.
+          </p>
 
-    <p class="text-[#303030] font-semibold">
-    From a quiet attic workshop in rural England 
-    to 50,000 professionals worldwide, our story
-    is rooted in legacy, craftsmanship, and <br>
-     purpose.
-
-    </p>
-
-    <p class="text-[#303030] font font-semibold block py-4">
-   Discover how a grandfather’s lesson led to
-   something truly lasting.
-    </p>
+          <p class="text-[#303030] font-semibold text-sm md:text-base block py-4">
+            Discover how a grandfather's lesson led to
+            something truly lasting.
+          </p>
+        </div>
+       <div class="flex justify-center md:justify-start md:ml-16  mt-6 md:mt-2">
+          <button class=" rounded-[0.7rem] text-white text-sm md:text-[17px] font-semibold
+            py-3.5 px-[100px] md:py-3.5 md:px-[100px] bg-[#321a16]">
+            READ OUR STORY
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
-   <div class=" ml-[4rem] mt-2 ">
-  <button class="rounded-[0.7rem]  text-white text-[17px]  font-semibold
-    py-3.5 px-[100px] bg-[#321a16]  ">
-    READ OUR STORY 
-  </button>
-</div>
-  </div>
-  </section>
+</section>
 <!----------------------------------FAQ section------------------------------------------------------------>
-<section class="py-10 bg-white w-full max-w-screen ">
+<section class=" mt-[1rem] md:mt-0.5 py-10 bg-white w-full max-w-screen ">
   <div class="w-full flex justify-center">
     <div class="w-full max-w-2xl px-4">
       
@@ -891,15 +1027,15 @@
       <h1 class="text-4xl font-bold text-center text-black mb-6">FAQ</h1>
 
       <!-- Subheading -->
-      <p class="text-center text-[#303030] font-medium leading-relaxed mb-12 max-w-screen w-[44rem]">
+      <p class="text-center text-[#303030] font-medium leading-relaxed mb-12  md:w-[44rem]">
         Find all the answers you need to enjoy our premium leather goods with confidence.
         Explore our FAQs to learn about our high-quality materials, easy returns,
         free shipping, and more.
       </p>
 
-      <!-- FAQ List -->
-   <!-- FAQ Section -->
-<div class="space-y-1 max-w-screen w-[55rem] -ml-24">
+     <!-- FAQ Section -->
+
+<div class="space-y-1 max-w-screen md:w-[55rem] md:-ml-24">
   <!-- FAQ Item 1 -->
   <div class="faq-item border-b border-gray-200">
     <div class="flex justify-between items-center cursor-pointer py-2" onclick="toggleFAQ(this)">
@@ -1004,17 +1140,30 @@
 </section>
 
 <section>
- <div class="bg-[#ebebeb]  pt-2 pb-2" >
-   <span class="ml-[7rem] text-[14px] text-[#333333] font-[Arial] font-semibold">50,000+ Heirloom Bags Shipped</span> 
-   <span class="ml-[12rem] text-[14px] text-[#333333] font-[Arial] font-semibold">1 Year Warranty & 30 Day Returns</span>
-   <span class="ml-[17rem]  text-[14px] text-[#333333] font-[Arial] font-semibold "> Rated 4.8/5 from 1300+ Reviews</span>
+  <!-- Desktop Version  -->
+  <div class="hidden md:block">
+    <div class="bg-[#ebebeb] pt-2 pb-2">
+      <div class="container mx-auto flex justify-between px-2">
+        <span class="ml-[rem] text-[14px] text-[#333333] font-[Arial] font-semibold">50,000+ Heirloom Bags Shipped</span>
+        <span class="ml-[rem] text-[14px] text-[#333333] font-[Arial] font-semibold">1 Year Warranty & 30 Day Returns</span>
+        <span class="ml-[rem] text-[14px] text-[#333333] font-[Arial] font-semibold">Rated 4.8/5 from 1300+ Reviews</span>
+      </div>
+    </div>
+  
+  </div>
+
+  <!-- Mobile Version  -->
+  <div class="block md:hidden">
+      <div class="bg-[#ebebeb] py-3 text-center text-sm text-[#333333] font-sans font-semibold">
+      50,000+ Heirloom Bags Shipped | Rated 4.8/5
     </div>
 
+
+  </div>
 </section>
 
-
 <footer >
-<div class="bg-black h-[50rem]">
+<div class="bg-black h-[80rem] md:h-[75rem]">
   <div class="bg-black h-[30rem] flex flex-col pt-16 px-4">
     
     <!-- Centered content -->
@@ -1033,8 +1182,8 @@
     </div>
 
     <!-- Grid aligned left -->
-    <div class="grid grid-cols-3 gap-x-40 mt-20">
-      <div class="bg-amber-500 h-[5rem] w-[5rem] ml-6">
+    <div class=" grid grid-cols-1 gap-y-10 md:grid-cols-3 md:gap-x-40 mt-[5rem] md:mt-20">
+      <div class="bg-amber-500 h-[5rem] w-[5rem] ml-[18rem] md:ml-6">
         <img src="logo.png" class="h-full w-full object-cover">
       </div>
       <div class="bg-black h-[20rem]">
@@ -1045,7 +1194,7 @@
             <li class="dropdown text[1.5rem] font-semibold text-[#a8a8a8] py-1  hover:underline relative">
   <button class="flex items-center focus:outline-none" onclick="toggleDropdown(this)">
     <span>Work Bags</span>
-    <svg id="work-bags-arrow" class="ml-1 h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg id="work-bags-arrow" class="ml-20 text-white h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
     </svg>
   </button>
@@ -1065,38 +1214,38 @@
         <div class="bg-amber-200 w-[23rem] h-[10rem]">
           <img src="drop1.png" class="w-full h-full object-cover" alt="Leather Briefcases">
         </div>
-        <div class="mt-2 text-center font-medium w-[23rem]">Leather Briefcases</div>
+        <div class="mt-2 text-center w-[23rem] font-bold text-black">Leather Briefcases</div>
       </div>
       
         <!-- Briefcases Column -->
         <div>
-          <h3 class="font-semibold text-black mb-4 text-sm uppercase tracking-wider border-b pb-2">Briefcases</h3>
+          <h3 class="font-bold text-black mb-4 text-sm tracking-wider border-b mr-10 border-black ">Briefcases</h3>
           <ul class="space-y-3">
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Leather Briefcases</li>
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Leather Laptop Bags</li>
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Leather Work Bags</li>
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Leather Attache Cases</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Leather Briefcases</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Leather Laptop Bags</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Leather Work Bags</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Leather Attache Cases</li>
           </ul>
         </div>
         
         <!-- Messenger Bags Column -->
         <div>
-          <h3 class="font-semibold text-black mb-4 text-sm uppercase tracking-wider border-b pb-2">Messenger Bags</h3>
+          <h3 class="font-bold text-black mb-4 text-sm tracking-wider border-b border-black nr-10 pb-2">Messenger Bags</h3>
           <ul class="space-y-3">
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Leather Messenger Bags</li>
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Leather Satchel Bags</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Leather Messenger Bags</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Leather Satchel Bags</li>
           </ul>
         </div>
         
         <!-- Professionals Column -->
         <div>
-          <h3 class="font-semibold text-black mb-4 text-sm uppercase tracking-wider border-b pb-2">Professionals</h3>
+          <h3 class="font-bold text-black mb-4 text-sm tracking-wider border-b border-black mr-10 pb-2">Professionals</h3>
           <ul class="space-y-3">
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Pilot Bags</li>
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Doctor Bags</li>
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Teacher Bags</li>
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Lawyer Bags</li>
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Photographer Bags</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Pilot Bags</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Doctor Bags</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Teacher Bags</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Lawyer Bags</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Photographer Bags</li>
           </ul>
         </div>
       </div>
@@ -1106,7 +1255,7 @@
             <li class="dropdown text[1.5rem] font-semibold text-[#a8a8a8] py-1  hover:underline relative">
   <button class="flex items-center focus:outline-none" onclick="toggleDropdown(this)">
     <span>Travel Bags</span>
-    <svg id="work-bags-arrow" class="ml-1 h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg id="work-bags-arrow" class="ml-20 text-white h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
     </svg>
   </button>
@@ -1124,51 +1273,51 @@
       <div class="w-3/4 grid grid-row-4 gap-8">
       <div class="w-1/4 pr-8">
         <div class="bg-amber-200 w-[23rem] h-[10rem]">
-          <img src="drop1.png" class="w-full h-full object-cover" alt="Leather Briefcases">
+          <img src="drop2.png" class="w-full h-full object-cover" alt="Leather Briefcases">
         </div>
-        <div class="mt-2 text-center font-medium w-[23rem]">Leather Briefcases</div>
+        <div class="mt-2 text-center w-[23rem] font-bold text-black">Leather Bagpacks</div>
       </div>
       
         <!-- Briefcases Column -->
         <div>
-          <h3 class="font-semibold text-black mb-4 text-sm uppercase tracking-wider border-b pb-2">Briefcases</h3>
+          <h3 class="font-bold text-black mb-4 text-sm tracking-wider border-b mr-10 border-black ">Briefcases</h3>
           <ul class="space-y-3">
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Leather Briefcases</li>
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Leather Laptop Bags</li>
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Leather Work Bags</li>
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Leather Attache Cases</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Leather Briefcases</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Leather Laptop Bags</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Leather Work Bags</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Leather Attache Cases</li>
           </ul>
         </div>
         
         <!-- Messenger Bags Column -->
         <div>
-          <h3 class="font-semibold text-black mb-4 text-sm uppercase tracking-wider border-b pb-2">Messenger Bags</h3>
+          <h3 class="font-bold text-black mb-4 text-sm tracking-wider border-b border-black nr-10 pb-2">Messenger Bags</h3>
           <ul class="space-y-3">
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Leather Messenger Bags</li>
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Leather Satchel Bags</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Leather Messenger Bags</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Leather Satchel Bags</li>
           </ul>
         </div>
         
         <!-- Professionals Column -->
         <div>
-          <h3 class="font-semibold text-black mb-4 text-sm uppercase tracking-wider border-b pb-2">Professionals</h3>
+          <h3 class="font-bold text-black mb-4 text-sm tracking-wider border-b border-black mr-10 pb-2">Professionals</h3>
           <ul class="space-y-3">
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Pilot Bags</li>
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Doctor Bags</li>
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Teacher Bags</li>
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Lawyer Bags</li>
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Photographer Bags</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Pilot Bags</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Doctor Bags</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Teacher Bags</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Lawyer Bags</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Photographer Bags</li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 </li>
-             
-            <li class="dropdown text[1.5rem] font-semibold text-[#a8a8a8] py-1  hover:underline relative">
+
+  <li class="dropdown text[1.5rem] font-semibold text-[#a8a8a8] py-1  hover:underline relative">
   <button class="flex items-center focus:outline-none" onclick="toggleDropdown(this)">
     <span>Accessories</span>
-    <svg id="work-bags-arrow" class="ml-1 h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg id="work-bags-arrow" class="ml-20 text-white h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
     </svg>
   </button>
@@ -1186,40 +1335,40 @@
       <div class="w-3/4 grid grid-row-4 gap-8">
       <div class="w-1/4 pr-8">
         <div class="bg-amber-200 w-[23rem] h-[10rem]">
-          <img src="drop1.png" class="w-full h-full object-cover" alt="Leather Briefcases">
+          <img src="drop3.png" class="w-full h-full object-cover" alt="Leather Briefcases">
         </div>
-        <div class="mt-2 text-center font-medium w-[23rem]">Leather Briefcases</div>
+        <div class="mt-2 text-center w-[23rem] font-bold text-black">Leather Wallets</div>
       </div>
       
         <!-- Briefcases Column -->
         <div>
-          <h3 class="font-semibold text-black mb-4 text-sm uppercase tracking-wider border-b pb-2">Briefcases</h3>
+          <h3 class="font-bold text-black mb-4 text-sm tracking-wider border-b mr-10 border-black ">Briefcases</h3>
           <ul class="space-y-3">
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Leather Briefcases</li>
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Leather Laptop Bags</li>
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Leather Work Bags</li>
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Leather Attache Cases</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Leather Briefcases</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Leather Laptop Bags</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Leather Work Bags</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Leather Attache Cases</li>
           </ul>
         </div>
         
         <!-- Messenger Bags Column -->
         <div>
-          <h3 class="font-semibold text-black mb-4 text-sm uppercase tracking-wider border-b pb-2">Messenger Bags</h3>
+          <h3 class="font-bold text-black mb-4 text-sm tracking-wider border-b border-black nr-10 pb-2">Messenger Bags</h3>
           <ul class="space-y-3">
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Leather Messenger Bags</li>
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Leather Satchel Bags</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Leather Messenger Bags</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Leather Satchel Bags</li>
           </ul>
         </div>
         
         <!-- Professionals Column -->
         <div>
-          <h3 class="font-semibold text-black mb-4 text-sm uppercase tracking-wider border-b pb-2">Professionals</h3>
+          <h3 class="font-bold text-black mb-4 text-sm tracking-wider border-b border-black mr-10 pb-2">Professionals</h3>
           <ul class="space-y-3">
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Pilot Bags</li>
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Doctor Bags</li>
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Teacher Bags</li>
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Lawyer Bags</li>
-            <li class="text-[#333333] hover:text-black text-sm cursor-pointer">Photographer Bags</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Pilot Bags</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Doctor Bags</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Teacher Bags</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Lawyer Bags</li>
+            <li class="text-black hover:text-black text-sm cursor-pointer">Photographer Bags</li>
           </ul>
         </div>
       </div>
@@ -1260,9 +1409,7 @@
 
   </div>
 
-  <div class="mt-44">
-    <hr class="h-2 text-[#a8a8a8] ">
-  </div>
+ 
 </div>
 
 

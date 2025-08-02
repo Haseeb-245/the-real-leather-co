@@ -97,3 +97,51 @@ document.querySelectorAll('.product-card').forEach(card => {
       arrow.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
     }
   }
+
+
+    // Mobile menu toggle
+document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.toggle('hidden');
+  document.body.style.overflow = menu.classList.contains('hidden') ? '' : 'hidden';
+});
+
+// Mobile menu close button
+document.getElementById('mobile-menu-close').addEventListener('click', function() {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.add('hidden');
+  document.body.style.overflow = '';
+});
+
+// Mobile dropdown toggles
+document.querySelectorAll('.mobile-dropdown-toggle').forEach(button => {
+  button.addEventListener('click', function() {
+    const dropdown = this.nextElementSibling;
+    const icon = this.querySelector('svg');
+    
+    // Close all other dropdowns first
+    document.querySelectorAll('.mobile-dropdown-content').forEach(d => {
+      if (d !== dropdown) {
+        d.classList.remove('open');
+        d.previousElementSibling.querySelector('svg').classList.remove('rotate-180');
+      }
+    });
+    
+    // Toggle current dropdown
+    dropdown.classList.toggle('open');
+    icon.classList.toggle('rotate-180');
+  });
+});
+
+// Desktop dropdown hover functionality
+document.querySelectorAll('.dropdown').forEach(item => {
+  item.addEventListener('mouseenter', function() {
+    const dropdown = this.querySelector('.dropdown-content');
+    dropdown.classList.remove('hidden');
+  });
+  
+  item.addEventListener('mouseleave', function() {
+    const dropdown = this.querySelector('.dropdown-content');
+    dropdown.classList.add('hidden');
+  });
+});
